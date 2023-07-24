@@ -1,0 +1,4 @@
+1. BigInt Style vs parseInt Style?
+2. Value Type vs Object Type?
+3. How to create a Function? How Many Ways?
+4. == vs ===
