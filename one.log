@@ -1,0 +1,154 @@
+var a;
+undefined
+typeof a;
+'undefined'
+a=100;
+100
+typeof a;
+'number'
+a=100.20;
+100.2
+typeof a;
+'number'
+a=1;
+1
+typeof a;
+'number'
+a=11111111111111111111111111;
+1.111111111111111e+25
+typeof a;
+'number'
+a=10/0;
+Infinity
+a;
+Infinity
+typeof a;
+'number'
+a=10 - "ten";
+NaN
+a = 10 - "10";
+0
+a=10 - "amit";
+NaN
+typeof a;
+'number'
+isNaN(a);
+true
+isNaN(a)?"OOPS Something went Wrong":a;
+'OOPS Something went Wrong'
+a=10/0;
+Infinity
+isFinite(a)?a:0;
+0
+a = 10;
+10
+var b = "20";
+undefined
+a +b;
+'1020'
+a + parseInt(b);
+30
+a + parseFloat("10.20");
+20.2
+10 - "10";
+0
+10 * 10;
+100
+10/10
+1
+10/"10"
+1
+2**5
+32
+10 * undefined;
+NaN
+a = "Amit";
+'Amit'
+typeof a;
+'string'
+a = 'Amit';
+'Amit'
+typeof a;
+'string'
+a='A';
+'A'
+typeof a;
+'string'
+a = `jghfdghdfjhgfhghfdkjhgdfkj
+kghdfklgd
+ghdfjk
+ghdfkj`;
+'jghfdghdfjhgfhghfdkjhgdfkj\nkghdfklgd\nghdfjk\nghdfkj'
+var name = 'Ram';
+var b = `Dear ${name}, Hope ur doing good`;
+undefined
+b;
+'Dear Ram, Hope ur doing good'
+name = 'Shyam';
+'Shyam'
+
+var b = `Dear ${name}, Hope ur doing good`;
+undefined
+b;
+'Dear Shyam, Hope ur doing good'
+name = 'Tim';
+'Tim'
+
+var b = `Dear ${name}, Hope ur doing good`;
+undefined
+b;
+'Dear Tim, Hope ur doing good'
+var att = true;
+undefined
+typeof att;
+'boolean'
+10 + true;
+11
+a = 1;
+1
+typeof a;
+'number'
+a=Number.MAX_SAFE_INTEGER;
+9007199254740991
+++a;
+9007199254740992
+++a;
+9007199254740992
+++a;
+9007199254740992
+++a;
+9007199254740992
+a = 9007199254740992n;
+9007199254740992n
+typeof a;
+'bigint'
+++a;
+9007199254740993n
+++a;
+9007199254740994n
+++a;
+9007199254740995n
+++a;
+9007199254740996n
+++a;
+9007199254740997n
+a = a + 53465456435n;
+9007252720197432n
+1000n + 43543;
+VM1644:1 Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions
+    at <anonymous>:1:7
+(anonymous) @ VM1644:1
+var t = BigInt("6436464564564564");
+undefined
+t;
+6436464564564564n
+parseInt("111");
+111
+BigInt("1111");
+1111n
+typeof parseInt;
+'function'
+typeof BigInt;
+'function'
+String;
+ƒ String() { [native code] }
