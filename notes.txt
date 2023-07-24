@@ -1,0 +1,36 @@
+https://dontpad.com/vips-code
+
+JavaScript 
+1. Programming Language
+2. Page Behave
+3. Client Side / Browser
+4. JS is Supported by All Most Every browser, every browser has JS Engine.
+
+Variable Declare
+var a;
+Data Types
+a) undefined
+b) number Correct Values (0-9) , Decimal Value ,
+Error Value -  Infinity , NaN
+Helper Methods : isFinite , isNaN, parseInt, parseFloat
+c) string 
+“”
+‘’
+`` - ES6 
+String Interpolation
+var b = `Dear ${name}, Hope ur doing good`;
+d) boolean
+E)bigint (ES2020)
+var t = 10000n;
+
+
+
+** (ES8 (2017) ) Exponent Operator
+Rule of TypeCasting
+N + S  = S
+N + N = N
+N + B = N
+S + B = S
+
+
+
