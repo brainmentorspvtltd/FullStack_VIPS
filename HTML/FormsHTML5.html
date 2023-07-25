@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Forms</h1>
+
+    <!-- action -->
+    <!-- method - get / post -->
+    <form action="/register" method="get" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>
+                    <label for="name">Enter Your Name</label>
+                </td>
+                <td>
+                    <input type="text" name="username" id="name" placeholder="Enter your name" required autofocus autocomplete="off">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Your Email</td>
+                <td>
+                    <input type="email" name="usermail" placeholder="Enter your email" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Your Password</td>
+                <td>
+                    <input type="password" name="userpwd" placeholder="Enter your password" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter DOB</td>
+                <td>
+                    <input type="date">
+                </td>
+                <td>
+                    <input type="time">
+                </td>
+                <td>
+                    <input type="datetime-local">
+                </td>
+                <td>
+                    <input type="month">
+                </td>
+                <td>
+                    <input type="week">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter URL</td>
+                <td>
+                    <input type="url" placeholder="Enter URL">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Phone</td>
+                <td>
+                    <input type="tel" placeholder="Enter Phone Number">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Age</td>
+                <td>
+                    <input type="number" min="18" max="50">
+                </td>
+            </tr>
+            <tr>
+                <td>Choose Color</td>
+                <td>
+                    <input type="color">
+                </td>
+            </tr>
+            <tr>
+                <td>Select Price Range</td>
+                <td>
+                    <input type="range" min="0" max="100" value="200" onchange="progress.value=value" step="1">
+                </td>
+                <td>
+                    <output id="op">200</output>
+                </td>
+            </tr>
+            <tr>
+                <td>Progress</td>
+                <td>
+                    <progress id="progress" max="100" value="70"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>Upload Image</td>
+                <td>
+                    <input type="file">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="city">Enter your City</label>
+                </td>
+                <td>
+                    <!-- <select name="usercity" id="city">
+                        <option>Choose City</option>
+                        <option value="del">Delhi</option>
+                        <option value="noida">Noida</option>
+                        <option value="pune">Pune</option>
+                        <option value="mum">Mumbai</option>
+                    </select> -->
+                    <select name="usercity" id="city">
+                        <option>Choose Location</option>
+                        <optgroup label="Delhi">
+                            <option value="">Rohini</option>
+                            <option value="">Rithala</option>
+                            <option value="">Saket</option>
+                            <option value="">Hauz Khas</option>
+                        </optgroup>
+                        <optgroup label="UP">
+                            <option value="">Noida</option>
+                            <option value="">Ghaziabad</option>
+                            <option value="">Lucknow</option>
+                            <option value="">Modinagar</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Select Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="m"> Male
+                    <input type="radio" name="gender" value="f"> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Choose Course</td>
+                <td>
+                    <input type="checkbox" value="btech"> Btech
+                    <input type="checkbox" value="bca"> BCA
+                    <input type="checkbox" value="bba"> BBA
+                    <input type="checkbox" value="mba"> MBA
+                </td>
+            </tr>
+            <tr>
+                <td>Enter your comments</td>
+                <td>
+                    <textarea name="comment" placeholder="Enter your comments" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>
