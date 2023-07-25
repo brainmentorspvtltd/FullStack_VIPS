@@ -1,0 +1,27 @@
+1. GC - How it Vanish the Memory?
+A) make it null
+b)
+C)
+
+
+2. Null vs undefined
+
+3. Immutable vs Mutable
+
+4. WAF add()
+add() - 0
+add(1) - 1
+add(1,2) - 3
+add(1,2,3,4) -10
+add(“1”,2,3,”four”) - 6
+add(1,[2,”3”],”4”) - 10
+add(1,one, [two,”3”, four, “five”], 6);
+function one(){
+return “1”;
+}
+function two (){
+return 2;
+}
+function four (){
+return 4;
+}
