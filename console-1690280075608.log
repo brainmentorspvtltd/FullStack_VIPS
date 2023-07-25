@@ -1,0 +1,201 @@
+var a = 100;
+undefined
+var marks =[90,66,100,55,45];
+undefined
+marks.push(88);
+6
+marks;
+(6) [90, 66, 100, 55, 45, 88]
+marks.pop();
+88
+marks.shift();
+90
+marks;
+(4) [66, 100, 55, 45]
+marks.unshift(1000);
+5
+marks;
+(5) [1000, 66, 100, 55, 45]
+typeof marks;
+'object'
+var t = 1000;
+undefined
+var x= t;
+undefined
+x = x + 100;
+1100
+++x;  // x= x + 1
+1101
+var arr = [10,20,30,40,50];
+undefined
+var arr2 = arr;
+undefined
+arr2[0] = 22222;
+22222
+arr2;
+(5) [22222, 20, 30, 40, 50]
+arr;
+(5) [22222, 20, 30, 40, 50]
+typeof arr;
+'object'
+arr instanceof Array;
+true
+typeof Array;
+'function'
+var e = [10,20,30];
+undefined
+var w = new Array(10);
+undefined
+w;
+(10) [empty × 10]
+w instanceof Array;
+true
+class A{
+    
+}
+undefined
+typeof A;
+'function'
+var temp ={"shimla":10, "delhi":22};
+undefined
+temp['shimla'];
+10
+typeof temp;
+'object'
+temp instanceof Array;
+false
+temp instanceof Object;
+true
+typeof Object;
+'function'
+var age = 21;
+undefined
+typeof age;
+'number'
+age.toString();
+'21'
+age;
+21
+var price = 100000;
+undefined
+typeof price;
+'number'
+price * 0.20;
+20000
+price;
+100000
+price.toLocaleString('hi-IN');
+'1,00,000'
+price;
+100000
+price.toLocaleString('en-US');
+'100,000'
+price.toLocaleString('fr-FR');
+'100 000'
+arr;
+(5) [22222, 20, 30, 40, 50]
+arr2;
+(5) [22222, 20, 30, 40, 50]
+arr2[0= 55555;
+VM1715:1 Uncaught SyntaxError: Invalid left-hand side in assignment
+arr2[0]= 55555;
+55555
+arr;
+(5) [55555, 20, 30, 40, 50]
+arr2;
+(5) [55555, 20, 30, 40, 50]
+arr == arr2;
+true
+var arr3 = [...arr];
+undefined
+arr3;
+(5) [55555, 20, 30, 40, 50]
+arr3 == arr;
+false
+arr3[0] = 111111;
+111111
+arr3;
+(5) [111111, 20, 30, 40, 50]
+arr;
+(5) [55555, 20, 30, 40, 50]
+var a = [10,20,30,40,50];
+undefined
+var products = [{name:'Samsung Galaxy', price:20000, color:'red'}, {name:'IPhone 14 ', price:120000, color:'blue'}]
+undefined
+products[0].price;
+20000
+var arr = [10, 20,30];
+undefined
+typeof arr;
+'object'
+arr;
+(3) [10, 20, 30]
+arr = null;
+null
+arr;
+null
+typeof arr;
+'object'
+arr= [10,20];
+(2) [10, 20]
+arr;
+(2) [10, 20]
+typeof undefined;
+'undefined'
+null == undefined;
+true
+10 == "10";
+true
+10 === "10";
+false
+20 =="30";
+false
+null === undefined;
+false
+var t = 10;
+undefined
+typeof t;
+'number'
+t = null;
+null
+typeof t;
+'object'
+t = undefined;
+undefined
+var vips = [{rollno:Symbol(), name:'Ram', marks:100}, {rollno:Symbol(), name:'Shyam', marks:90}] 
+undefined
+Symbol();
+Symbol()
+Symbol();
+Symbol()
+Symbol();
+Symbol()
+Symbol();
+Symbol()
+Symbol == Symbol();
+false
+var t = Symbol();
+undefined
+var x = Symbol();
+undefined
+t;
+Symbol()
+x;
+Symbol()
+t== x;
+false
+t=== x;
+false
+function add(){
+    console.log("I am add ");
+}
+undefined
+add();
+VM3145:2 I am add 
+undefined
+add(1,2);
+VM3145:2 I am add 
+undefined
+add(1,"2",[3]);
+VM3145:2 I am add 
+undefined
