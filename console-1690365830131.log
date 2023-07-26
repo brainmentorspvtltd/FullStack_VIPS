@@ -1,0 +1,65 @@
+function add(){
+    var sum = 0;
+    //console.log(" i am the Add ", arguments instanceof Array);
+    for(var i = 0; i<arguments.length; i++){
+        if(typeof arguments[i] ==='function'){
+            arguments[i] = arguments[i]();
+        }
+        sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+[] instanceof Array;
+true
+typeof function(){}
+'function'
+function add(){
+    var sum = 0;
+    //console.log(" i am the Add ", arguments instanceof Array);
+    for(var i = 0; i<arguments.length; i++){
+        if(arguments[i] instanceof Array){
+            for(var j = 0; j<arguments[i].length; j++){
+                 sum = sum + (isNaN(parseInt(arguments[i][j]))?0:parseInt(arguments[i][j]));
+            }
+        }
+        if(typeof arguments[i] ==='function'){
+            arguments[i] = arguments[i]();
+        }
+        sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+function add(){
+    var sum = 0;
+    //console.log(" i am the Add ", arguments instanceof Array);
+    for(var i = 0; i<arguments.length; i++){
+        if(arguments[i] instanceof Array){
+            for(var j = 0; j<arguments[i].length; j++){
+                 sum = sum + (isNaN(parseInt(arguments[i][j]))?0:parseInt(arguments[i][j]));
+            }
+            continue;
+        }
+        if(typeof arguments[i] ==='function'){
+            arguments[i] = arguments[i]();
+        }
+        sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+add(one, two , [3,"4"],5,"six");
+VM443:1 Uncaught ReferenceError: one is not defined
+    at <anonymous>:1:5
+(anonymous) @ VM443:1
+function one(){
+    return 1;
+}
+undefined
+function two(){
+    return "2";
+}
+undefined
+add(one, two , [3,"4"],5,"six");
+15
