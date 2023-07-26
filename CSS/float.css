@@ -1,0 +1,38 @@
+/* * {
+    margin: 0px;
+    padding: 0px;
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.col {
+    padding: 10px;
+}
+
+.col-1 {
+    background-color: lightblue;
+    width: 40%;
+    float: left;
+}
+
+.col-2 {
+    background-color: lightgray;
+    width: 40%;
+    float: right;
+}
+
+#section-2 {
+    background-color: lightgoldenrodyellow;
+}
+
+/* .blank {
+    clear: both;
+} */

@@ -11,11 +11,26 @@
         #title {
             color: blue;
         }
-        #section-1 h2 {
+        /* #section-1 h2 {
             color: red;
-        }
+        } */
         .section {
             border: 1px solid red;
+        }
+        /* .section .child h2 {
+            color: red;
+        } */
+        /* to select immediate child */
+        .section > h2 {
+            color: red;
+        }
+        /* to select immediate sibling */
+        #section-4 + h2 {
+            color: blue;
+        }
+        /* to select all siblings */
+        #section-4 ~ h2 {
+            color: blue;
         }
     </style>
 </head>
@@ -38,9 +53,15 @@
 
      <div id="section-1" class="section">
         <h2>This is Section-1</h2>
+        <div class="child">
+            <h2>This is child heading</h2>
+        </div>
      </div>
      <div id="section-2" class="section">
         <h2>This is Section-2</h2>
+        <div class="child">
+            <h2>This is child heading</h2>
+        </div>
      </div>
      <div id="section-3" class="section">
         <h2>This is Section-3</h2>
@@ -48,6 +69,12 @@
      <div id="section-4" class="section">
         <h2>This is Section-4</h2>
      </div>
+     
+     <hr>
+
+     <h2>This heading is outside div</h2>
+     <h2>This heading is outside div</h2>
+     <h2>This heading is outside div</h2>
 
     
 </body>
