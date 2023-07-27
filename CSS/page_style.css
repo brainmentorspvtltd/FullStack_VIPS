@@ -7,7 +7,9 @@ body {
     padding: 0px;
     box-sizing: border-box;
 }
-
+ul {
+    list-style: none;
+}
 a {
     text-decoration: none;
 }
@@ -28,6 +30,7 @@ a {
 .container {
     width: 1600px;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 #header {
@@ -64,7 +67,7 @@ a {
     border: none;
 }
 
-#header .user-links ul li {
+#header .user-links > ul > li {
     display: inline-block;
     padding: 0px 20px;
     font-size: 16px;
@@ -74,9 +77,37 @@ a {
     color: #000;
 }
 
+#header .user-links .dropdown {
+    position: absolute;
+    background-color: #fff;
+    z-index: 1;
+    width: 12%;
+    top: 40px;
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: none;
+}
+#header .user-links .dropdown .dropdown-header {
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+#header .user-links .dropdown ul li a {
+    display: block;
+    padding: 10px;
+}
+#header .user-links .dropdown a:hover {
+    background-color: #F0F5FF;
+}
+
+#header .user-links ul li:hover .dropdown {
+    display: block;
+}
+
 /* Navigation CSS */
 #main-nav {
     background-color: #fff;
+    margin-bottom: 20px;
 }
 #main-nav ul li {
     display: inline-block;
@@ -90,4 +121,40 @@ a {
     color: #000;
     display: block;
     padding: 5px;
+}
+
+/* Banner */
+#banner {
+    
+}
+#banner .slideshow {
+    width: 500%;
+    animation-name: carousel;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+#banner .slide {
+    display: inline-block;
+    width: 20%;
+    margin: 0px -2px;
+}
+@keyframes carousel {
+    0%,15% {
+        transform: translateX(0%);
+    }
+    20%, 35% {
+        transform: translateX(-20%);
+    }
+    40%,55% {
+        transform: translateX(-40%);
+    }
+    60%,75% {
+        transform: translateX(-60%);
+    }
+    80%,95% {
+        transform: translateX(-80%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }
