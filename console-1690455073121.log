@@ -1,0 +1,223 @@
+show();
+function show(){
+    console.log("I am the Show ");
+}
+VM143:3 I am the Show 
+undefined
+show();
+VM143:3 I am the Show 
+undefined
+window.show();
+VM143:3 I am the Show 
+undefined
+show= 100;
+100
+show();
+VM306:1 Uncaught TypeError: show is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM306:1
+var q = 100;
+undefined
+typeof q;
+'number'
+t();
+var t = function(){
+    console.log('Fn Expression , Anonymous Fn ');
+}
+VM477:1 Uncaught TypeError: t is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM477:1
+console.log('R is ', r);
+r();
+var r = function(){
+    console.log('Fn Expression , Anonymous Fn ');
+}
+VM527:1 R is  undefined
+VM527:2 Uncaught TypeError: r is not a function
+    at <anonymous>:2:1
+(anonymous) @ VM527:2
+undefined();
+VM553:1 Uncaught TypeError: undefined is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM553:1
+function User(){
+    var add = function(){
+        
+    }
+    var remove= function(){}
+    var update= function(){}
+}
+function Order(){
+    var update= function(){}
+    var add = function(){
+        
+    }
+    var remove= function(){}
+}
+function Cart(){
+    var add = function(){}
+}
+undefined
+function User(){
+    var add = function(){
+        
+    }
+    var remove= function(){}
+    var update= function(){}
+}
+function Order(){
+    var update= function(){}
+    var add = function(){
+        
+    }
+    var remove= function(){}
+    return {update, add, remove};
+}
+function Cart(){
+    var add = function(){}
+}
+undefined
+var e = Order();
+undefined
+typeof e;
+'object'
+e;
+{update: ƒ, add: ƒ, remove: ƒ}add: ƒ ()remove: ƒ ()update: ƒ ()[[Prototype]]: Object
+function User(){
+    var add = function(){
+        
+    }
+    var remove= function(){}
+    var update= function(){}
+}
+function Order(x,y, z){
+    var update= function(){}
+    var add = function(){
+        return x + y + z;
+    }
+    var remove= function(){}
+    return {update, add, remove};
+}
+function Cart(){
+    var add = function(){}
+}
+undefined
+function Order(x,y, z){
+    var update= function(){}
+    var add = function(){
+        return x + y + z;
+    }
+    var remove= function(){}
+    return {update, add, remove};
+}
+undefined
+var t = Order(100,200,300);
+undefined
+typeof t;
+'object'
+t.add();
+600
+console.dir(t.add);
+VM1090:1 ƒ add()arguments: nullcaller: nulllength: 0name: "add"prototype: {constructor: ƒ}[[FunctionLocation]]: VM902:3[[Prototype]]: ƒ ()[[Scopes]]: Scopes[2]0: Closure (Order) {z: 300, y: 200, x: 100}1: Global {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+function counter(){
+    var count=0;
+    count++;
+}
+undefined
+function counter(){
+    var count=0;
+    count++;
+    console.log(count);
+}
+undefined
+counter();
+VM1212:4 1
+undefined
+counter();
+VM1212:4 1
+undefined
+counter();
+VM1212:4 1
+undefined
+counter();
+VM1212:4 1
+undefined
+function counter(){
+    var count=0;
+    count++;
+    return count;
+    //console.log(count);
+}
+undefined
+var count=0;
+function counter(){
+    
+    count++;
+    return count;
+    //console.log(count);
+}
+undefined
+counter();
+1
+counter();
+2
+counter();
+3
+counter();
+4
+counter();
+5
+window.count = 100000000;
+100000000
+counter();
+100000001
+count = "Hello";
+'Hello'
+counter();
+NaN
+var count=0;
+function counter(){
+    
+    count++;
+    return count;
+    //console.log(count);
+}
+undefined
+counter();
+1
+counter();
+2
+counter();
+3
+count  = [];
+[]
+count  = -99999;
+-99999
+counter();
+-99998
+counter();
+-99997
+counter();
+-99996
+function init(){
+var count=0; // Lexical Scope
+function counter(){
+    
+    count++;
+    return count;
+    //console.log(count);
+}
+return counter; // return function + Lexical Scope = Closure
+}
+undefined
+var fn = init();
+undefined
+fn();
+1
+fn();
+2
+fn();
+3
+fn();
+4

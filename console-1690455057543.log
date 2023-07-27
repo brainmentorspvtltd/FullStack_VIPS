@@ -1,0 +1,47 @@
+function init(){
+var count=0; // Lexical Scope
+function counter(){
+    
+    count++;
+    return count;
+    //console.log(count);
+}
+return counter; // return function + Lexical Scope = Closure
+}
+
+var fn = init();
+
+
+undefined
+fn;
+ƒ counter(){
+    
+    count++;
+    return count;
+    //console.log(count);
+}
+fn();
+1
+fn();
+2
+fn();
+3
+fn();
+4
+count=111111;
+111111
+fn();
+5
+var q = function(){
+    
+}
+undefined
+var b =100;
+undefined
+function test(){
+    
+}
+undefined
+console.dir(test);
+VM278:1 ƒ test()arguments: nullcaller: nulllength: 0name: "test"prototype: {constructor: ƒ}[[FunctionLocation]]: VM232:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined

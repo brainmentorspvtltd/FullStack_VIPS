@@ -1,0 +1,72 @@
+function init(){
+var count=0; // Lexical Scope
+function counter(){
+    
+    count++;
+    return count;
+    //console.log(count);
+}
+return counter; // return function + Lexical Scope = Closure
+}
+
+var fn = init();
+undefined
+fn;
+ƒ counter(){
+    
+    count++;
+    return count;
+    //console.log(count);
+}
+fn();
+1
+fn();
+2
+fn();
+3
+count;
+VM68:1 Uncaught ReferenceError: count is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM68:1
+console.dir(counter);
+VM165:1 Uncaught ReferenceError: counter is not defined
+    at <anonymous>:1:13
+(anonymous) @ VM165:1
+console.dir(fn);
+VM190:1 ƒ counter()arguments: nullcaller: nulllength: 0name: "counter"prototype: {constructor: ƒ}[[FunctionLocation]]: VM15:3[[Prototype]]: ƒ ()[[Scopes]]: Scopes[2]0: Closure (init) {count: 3}1: Global {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+fn();
+4
+fn();
+5
+fn();
+6
+fn();
+7
+var fn = init();
+undefined
+fn();
+1
+fn();
+2
+fn();
+3
+var fn= (function (){
+var count=0; // Lexical Scope
+function counter(){
+    
+    count++;
+    return count;
+    //console.log(count);
+}
+return counter; // return function + Lexical Scope = Closure
+})();
+
+
+undefined
+fn();
+1
+fn();
+2
+fn();
+3
