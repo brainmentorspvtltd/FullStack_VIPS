@@ -1,5 +1,6 @@
 body {
     background-color: #F1F2F4;
+    font-family: 'Roboto', sans-serif;
 }
 * {
     margin: 0px;
@@ -32,6 +33,7 @@ a {
 #header {
     padding: 10px 0px;
     background-color: #fff;
+    margin-bottom: 15px;
 }
 
 #header .logo {
@@ -40,6 +42,7 @@ a {
 }
 #header .search {
     width: 50%;
+    margin-left: 25px;
 }
 #header .user-links {
     width: 35%;
@@ -64,9 +67,27 @@ a {
 #header .user-links ul li {
     display: inline-block;
     padding: 0px 20px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 #header .user-links ul li a {
     color: #000;
+}
+
+/* Navigation CSS */
+#main-nav {
+    background-color: #fff;
+}
+#main-nav ul li {
+    display: inline-block;
+    width: 9%;
+    text-align: center;
+}
+#main-nav ul li span {
+    display: block;
+}
+#main-nav ul li a {
+    color: #000;
+    display: block;
+    padding: 5px;
 }
