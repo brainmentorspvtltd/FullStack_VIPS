@@ -33,10 +33,19 @@ a {
     overflow-x: hidden;
 }
 
+.w-100 {
+    width: 100%;
+}
+
 #header {
     padding: 10px 0px;
     background-color: #fff;
     margin-bottom: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0px;
 }
 
 #header .logo {
@@ -107,6 +116,7 @@ a {
 /* Navigation CSS */
 #main-nav {
     background-color: #fff;
+    margin-top: 80px;
     margin-bottom: 20px;
 }
 #main-nav ul li {
@@ -125,7 +135,7 @@ a {
 
 /* Banner */
 #banner {
-    
+    margin-bottom: 30px;
 }
 #banner .slideshow {
     width: 500%;
@@ -157,4 +167,46 @@ a {
     100% {
         transform: translateX(0%);
     }
+}
+
+
+/* Best of Electronics */
+#section-1 .col-1 {
+    width: 84%;
+    background-color: #fff;
+    padding: 30px 10px 50px;
+}
+#section-1 .col-2 {
+    width: 15%;
+}
+#section-1 .col-1 h2 {
+    margin-bottom: 30px;
+}
+
+.products .product {
+    display: inline-block;
+    width: 14%;
+    margin: 0px 15px;
+    text-align: center;
+    border: 1px solid #000;
+}
+.products .product a {
+    display: block;
+    padding: 20px 10px;
+    color: #000;
+}
+.products .product img {
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+.section {
+    margin-bottom: 35px;
+}
+.section .wrapper {
+    background-color: #fff;
+    padding: 30px 10px 50px;
+}
+.section .wrapper h2 {
+    margin-bottom: 35px;
 }
