@@ -1,3 +1,8 @@
+/* Global Variables */
+:root {
+    --bg-theme: #f3f2ef;
+}
+
 /* Global Settings */
 * {
     margin: 0px;
@@ -6,6 +11,7 @@
 }
 
 body {
+    background-color: var(--bg-theme);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -58,6 +64,9 @@ ul {
 
 
 /* Header */
+#header {
+    background-color: #fff;
+}
 #header .col-1 {
     width: 30%;
 }
@@ -68,11 +77,15 @@ ul {
     width: 10%;
 }
 #header .search {
-    width: 90%;
+    width: 88%;
 }
 #header .search input[type="text"] {
     width: 100%;
-    height: 30px;
+    height: 35px;
+    background-color: #eef3f8;
+    border: none;
+    border-radius: 5px;
+    padding-left: 30px;
 }
 
 #header .search form {
@@ -81,7 +94,52 @@ ul {
 #header .search button {
     position: absolute;
     left: 10px;
-    top: 7px;
+    top: 9px;
     background-color: transparent;
     border: none;
+}
+
+#main-nav {
+    border-right: 1px solid var(--bg-theme);
+}
+#main-nav ul li {
+    text-align: center;
+    position: relative;
+    width: 15%;
+}
+#main-nav ul li span {
+    display: block;
+}
+#main-nav ul li a {
+    display: block;
+    padding: 10px 0px 0px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+#main-nav ul li a i {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+#main-nav ul li.active a{
+    color: #000;
+}
+#main-nav ul li:hover a{
+    color: #000;
+}
+
+#main-nav ul li.active::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+#main-nav ul li img {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
 }
