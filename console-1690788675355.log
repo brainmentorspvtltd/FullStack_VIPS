@@ -1,0 +1,94 @@
+function doNetworkCall(){
+    const URL = 'https://gist.githubusercontent.com/kshirsagarps/36fade16fa39202715656ef487aaf7b0/raw/2b682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json';
+    const promise = fetch(URL);
+    console.log('Promise is ', promise);
+    promise.then(function(response){
+        console.log(response);
+        return response;
+    }).catch(function(err){
+        console.log('Error ', err);
+    });
+    console.log('Good Bye ');
+
+}
+
+undefined
+doNetworkCall();
+VM24:4 Promise is  Promise {<pending>}
+VM24:11 Good Bye 
+undefined
+VM24:6 Response {type: 'cors', url: 'https://gist.githubusercontent.com/kshirsagarps/36…682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json', redirected: false, status: 200, ok: true, …}
+function doNetworkCall(){
+    var result ; // undefined
+    const URL = 'https://gist.githubusercontent.com/kshirsagarps/36fade16fa39202715656ef487aaf7b0/raw/2b682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json';
+    const promise = fetch(URL);
+    console.log('Promise is ', promise);
+    promise.then(function(response){
+        console.log(response);
+        result = response;
+        //return response;
+    }).catch(function(err){
+        console.log('Error ', err);
+    });
+    console.log('Good Bye ');
+   // return result;
+    setTimeout(()=>{
+        return result;
+    },5000);
+    // return undefined;
+}
+console.log('Return result is ',doNetworkCall());
+
+VM262:5 Promise is  Promise {<pending>}
+VM262:13 Good Bye 
+VM262:20 Return result is  undefined
+undefined
+VM262:7 Response {type: 'cors', url: 'https://gist.githubusercontent.com/kshirsagarps/36…682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json', redirected: false, status: 200, ok: true, …}
+// Clean Ways
+function getData(res){
+    console.log('Data Comes ' , res);
+}
+function doNetworkCall(fn){
+   
+    const URL = 'https://gist.githubusercontent.com/kshirsagarps/36fade16fa39202715656ef487aaf7b0/raw/2b682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json';
+    const promise = fetch(URL);
+    console.log('Promise is ', promise);
+    promise.then(function(response){
+        fn(response);
+        //return response;
+    }).catch(function(err){
+        console.log('Error ', err);
+    });
+    console.log('Good Bye ');
+  
+}
+doNetworkCall(getData);
+
+VM430:9 Promise is  Promise {<pending>}
+VM430:16 Good Bye 
+undefined
+VM430:3 Data Comes  Response {type: 'cors', url: 'https://gist.githubusercontent.com/kshirsagarps/36…682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json', redirected: false, status: 200, ok: true, …}
+// Clean Ways
+function getData(res){
+    console.log('Data Comes ' , res);
+}
+async function doNetworkCall(fn){
+   
+    const URL = 'https://gist.githubusercontent.com/kshirsagarps/36fade16fa39202715656ef487aaf7b0/raw/2b682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json';
+    try{
+    const response = await fetch(URL);
+        console.log('Response is ', response);
+    }
+    catch(err){
+        console.log('Error is ', err);
+    }
+    console.log('Good Bye ');
+  
+}
+const p = doNetworkCall(getData);
+console.log('P is ' , p);
+
+VM712:19 P is  Promise {<pending>}
+undefined
+VM712:10 Response is  Response {type: 'cors', url: 'https://gist.githubusercontent.com/kshirsagarps/36…682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json', redirected: false, status: 200, ok: true, …}body: (...)bodyUsed: falseheaders: Headers {}ok: trueredirected: falsestatus: 200statusText: ""type: "cors"url: "https://gist.githubusercontent.com/kshirsagarps/36fade16fa39202715656ef487aaf7b0/raw/2b682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json"[[Prototype]]: Response
+VM712:15 Good Bye 

@@ -1,0 +1,46 @@
+function doNetworkCall(){
+    console.log('Fn Starts');
+    const URL = 'https://gist.githubusercontent.com/kshirsagarps/36fade16fa39202715656ef487aaf7b0/raw/2b682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json';
+    const promise  = fetch(URL);
+    console.log('Promise is ', promise);
+    promise.then(function(response){
+        console.log('Res ', response);
+        return response;
+    }).catch(function(err){
+        console.log('Error is ', err);
+    });
+    console.log('Fn Ends...');
+}
+
+undefined
+doNetworkCall();
+VM20:2 Fn Starts
+VM20:5 Promise is  Promise {<pending>}
+VM20:12 Fn Ends...
+undefined
+VM20:7 Res  Response {type: 'cors', url: 'https://gist.githubusercontent.com/kshirsagarps/36…682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json', redirected: false, status: 200, ok: true, …}
+function callBack(response){
+    console.log('I get a Response ', response);
+}
+function doNetworkCall(fn){
+    console.log('Fn Starts');
+    const URL = 'https://gist.githubusercontent.com/kshirsagarps/36fade16fa39202715656ef487aaf7b0/raw/2b682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json';
+    const promise  = fetch(URL);
+    console.log('Promise is ', promise);
+    promise.then(function(response){
+        console.log('Res ', response);
+        //return response;
+        fn(response);
+    }).catch(function(err){
+        console.log('Error is ', err);
+    });
+    console.log('Fn Ends...');
+}
+doNetworkCall(callBack);
+
+VM256:5 Fn Starts
+VM256:8 Promise is  Promise {<pending>}
+VM256:16 Fn Ends...
+undefined
+VM256:10 Res  Response {type: 'cors', url: 'https://gist.githubusercontent.com/kshirsagarps/36…682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json', redirected: false, status: 200, ok: true, …}
+VM256:2 I get a Response  Response {type: 'cors', url: 'https://gist.githubusercontent.com/kshirsagarps/36…682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json', redirected: false, status: 200, ok: true, …}

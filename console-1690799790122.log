@@ -1,0 +1,85 @@
+setTimeout(function(){
+    console.log("I will run after 5 sec ");
+},5000);
+1
+VM150:2 I will run after 5 sec 
+console.log("Start ");
+setTimeout(function(){
+    console.log("I will run after 5 sec ");
+},5000);
+console.log("End ");
+VM198:1 Start 
+VM198:5 End 
+undefined
+VM198:3 I will run after 5 sec 
+function doWork(){
+   setTimeout(function(){
+   return ("I will run after 5 sec ");
+},5000); 
+}
+undefined
+console.log("Start ");
+const t = doWork();
+console.log("End ", t);
+VM283:1 Start 
+VM283:3 End  undefined
+undefined
+function getValue(data){
+    console.log(data);
+}
+function doWork(fn){
+   setTimeout(function(){
+   fn ("I will run after 5 sec ");
+},5000); 
+}
+console.log("Start ");
+doWork(getValue);
+console.log("End ");
+VM444:9 Start 
+VM444:11 End 
+undefined
+VM444:2 I will run after 5 sec 
+// this file will do Network Call
+function doNetworkCall(){
+    console.log('Fn Starts');
+    const URL = 'https://gist.githubusercontent.com/kshirsagarps/36fade16fa39202715656ef487aaf7b0/raw/2b682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json';
+    const promise  = fetch(URL);
+    console.log('Promise is ', promise);
+    promise.then(function(response){
+        console.log('Res ', response);
+        return response;
+    }).catch(function(err){
+        console.log('Error is ', err);
+    });
+    console.log('Fn Ends...');
+}
+undefined
+doNetworkCall();
+VM448:3 Fn Starts
+VM448:6 Promise is  Promise {<pending>}
+VM448:13 Fn Ends...
+undefined
+VM448:8 Res  Response {type: 'cors', url: 'https://gist.githubusercontent.com/kshirsagarps/36…682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json', redirected: false, status: 200, ok: true, …}
+async function doNetworkCall(){
+    console.log('Fn Starts');
+    const URL = 'https://gist.githubusercontent.com/kshirsagarps/36fade16fa39202715656ef487aaf7b0/raw/2b682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json';
+    try{
+    const response = await fetch(URL); // Header + Body
+    const obj = await response.json(); // JSON Convert into Object
+    return obj;    
+}
+    catch(err){
+        throw err;
+    }
+}
+undefined
+const p = doNetworkCall()
+VM482:2 Fn Starts
+undefined
+p;
+Promise {<fulfilled>: {…}}[[Prototype]]: Promise[[PromiseState]]: "fulfilled"[[PromiseResult]]: Object
+p.then(function(d){
+    console.log(d);
+});
+VM682:2 {Vegetarian: Array(3)}Vegetarian: Array(3)0: {id: 10, name: 'Vegan Veggie', price: '23.95', menu_description: 'Daiya vegan mozzarella, paired with fresh veggies', classifications: {…}, …}1: {id: 11, name: 'Veggie Zupreme', price: '19.95', menu_description: 'The freshest, locally sourced veggies', classifications: {…}, …}2: {id: 12, name: 'The O.G.', price: '16.95', menu_description: 'The Margherita—with California flair', classifications: {…}, …}length: 3[[Prototype]]: Array(0)[[Prototype]]: Object
+Promise {<fulfilled>: undefined}
