@@ -66,6 +66,7 @@ ul {
 /* Header */
 #header {
     background-color: #fff;
+    margin-bottom: 20px;
 }
 #header .col-1 {
     width: 30%;
@@ -142,4 +143,69 @@ ul {
     border-radius: 50%;
     height: 20px;
     width: 20px;
+}
+
+/* Content */
+
+/* Sidebar_1 */
+#sidebar_1 {
+    width: 25%;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#sidebar_1 .widget {
+    background-color: #fff;
+}
+#sidebar_1 .widget ul li a{
+    padding: 15px;
+    display: block;
+    color: #000;
+}
+#sidebar_1 .widget ul li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+#sidebar_1 .widget ul li:first-child {
+    text-align: center;
+    padding-bottom: 10px;
+}
+#sidebar_1 .widget ul li:first-child a {
+    padding: 5px;
+}
+#sidebar_1 .widget ul li:first-child img {
+    border-radius: 50%;
+    position: relative;
+    z-index: 10;
+    border: 4px solid #fff;
+}
+#sidebar_1 .widget ul li:not(:first-child):hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+#sidebar_1 .widget ul li .user-image {
+    position: relative;
+}
+#sidebar_1 .widget ul li .user-image::before {
+    content: "";
+    width: 100%;
+    height: 50%;
+    top: 0px;
+    position: absolute;
+    left: 0px;
+    background-image: url("https://static.licdn.com/sc/h/55k1z8997gh8dwtihm11aajyq");
+}
+#sidebar_1 .widget ul li p {
+    color: rgba(0, 0, 0, 0.6);
+    margin: 5px 0px;
+}
+
+
+/* Main */
+#main {
+    width: 45%;
+}
+
+/* Sidebar_2 */
+#sidebar_2 {
+    width: 15%;
 }
