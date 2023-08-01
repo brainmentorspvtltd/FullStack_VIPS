@@ -1,0 +1,14 @@
+var obj  = {id:1001, name:'Ram'};
+undefined
+var obj2 = {"id":1001, "name":"Ram"};
+undefined
+typeof obj2;
+'object'
+const json = JSON.stringify(obj);
+undefined
+json;
+'{"id":1001,"name":"Ram"}'
+typeof json;
+'string'
+JSON.parse(json);
+{id: 1001, name: 'Ram'}
