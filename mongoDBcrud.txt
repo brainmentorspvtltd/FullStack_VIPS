@@ -1,0 +1,350 @@
+Please enter a MongoDB connection string (Default: mongodb://localhost/):
+
+Current Mongosh Log ID: 64e2fdf1844f658c688ee6e3
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.9.1
+Using MongoDB:          6.0.8
+Using Mongosh:          1.9.1
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2023-08-16T13:49:48.628+05:30: Access control is not enabled for the database. Read and write access 
+vips_app> db.customers.insertOne({name:'Anjali',rollno:11.email:'anjali@gmail.com'});
+Uncaught:
+SyntaxError: Floating-point numbers require a valid exponent after the 'e'. (1:45)
+
+> 1 | db.customers.insertOne({name:'Anjali',rollno:11.email:'anjali@gmail.com'});
+    |                                              ^
+  2 |
+
+vips_app> db.customers.insertOne({name:'Anjali',rollno:11,email:'anjali@gmail.com'});
+{
+  acknowledged: true,
+  insertedId: ObjectId("64e2ff99844f658c688ee6e4")
+}
+vips_app> db.customers.find();
+[
+  {
+    _id: ObjectId("64e2ff99844f658c688ee6e4"),
+    name: 'Anjali',
+    rollno: 11,
+    email: 'anjali@gmail.com'
+  }
+]
+vips_app> db.customers.insertMany([
+   "name":"mohit",
+...     {
+...         "name":"shyam",
+...         "email":"shyam@gmail.com",
+...         "age":34,
+...         "address":{
+...             "colony":"Govindpuram",
+...             "district":"Ghaziabad",
+...             "pin":201003,
+...             "state":"UP"
+...         }
+...     },
+...     {
+...              "email":"mohit@gmail.com",
+...         "age":30,
+...         "address":{
+...             "colony":"Govindpuram",
+...             "district":"Ghaziabad",
+...             "pin":201003,
+...             "state":"UP"
+...         }
+...     },
+...     {
+...         "name":"Ram",
+...         "email":"Ram@gmail.com",
+...         "age":30,
+...         "address":{
+...             "colony":"NandGram",
+...             "district":"Ghaziabad",
+...             "pin":201003,
+...             "state":"UP"
+...         }
+...     },
+...     {
+...         "name":"Krish",
+...         "email":"krish@gmail.com",
+...         "age":22,
+...         "address":{
+...             "colony":"Indrapuram",
+...             "district":"Ghaziabad",
+...             "pin":201003,
+...             "state":"UP"
+...         }
+...     }
+...
+... );
+Uncaught:
+SyntaxError: Unexpected token, expected "," (46:0)
+
+  44 |     }
+  45 |
+> 46 | );
+     | ^
+  47 |
+
+vips_app> db.customers.insertMany([
+   "name":"mohit",
+...     {
+...         "name":"shyam",
+...         "email":"shyam@gmail.com",
+...         "age":34,
+...         "address":{
+...             "colony":"Govindpuram",
+...             "district":"Ghaziabad",
+...             "pin":201003,
+...             "state":"UP"
+...         }
+...     },
+...     {
+...              "email":"mohit@gmail.com",
+...         "age":30,
+...         "address":{
+...             "colony":"Govindpuram",
+...             "district":"Ghaziabad",
+...             "pin":201003,
+...             "state":"UP"
+...         }
+...     },
+...     {
+...         "name":"Ram",
+...         "email":"Ram@gmail.com",
+...         "age":30,
+...         "address":{
+...             "colony":"NandGram",
+...             "district":"Ghaziabad",
+...             "pin":201003,
+...             "state":"UP"
+...         }
+...     },
+...     {
+...         "name":"Krish",
+...         "email":"krish@gmail.com",
+...         "age":22,
+...         "address":{
+...             "colony":"Indrapuram",
+...             "district":"Ghaziabad",
+...             "pin":201003,
+...             "state":"UP"
+...         }
+...     }
+... ]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64e3018e844f658c688ee6e5"),
+    '1': ObjectId("64e3018e844f658c688ee6e6"),
+    '2': ObjectId("64e3018e844f658c688ee6e7"),
+    '3': ObjectId("64e3018e844f658c688ee6e8")
+  }
+}
+vips_app> db.customers.find();
+[
+  {
+    _id: ObjectId("64e2ff99844f658c688ee6e4"),
+    name: 'Anjali',
+    rollno: 11,
+    email: 'anjali@gmail.com'
+  },
+  {
+    _id: ObjectId("64e3018e844f658c688ee6e5"),
+    name: 'shyam',
+    email: 'shyam@gmail.com',
+    age: 34,
+    address: {
+      colony: 'Govindpuram',
+      district: 'Ghaziabad',
+      pin: 201003,
+      state: 'UP'
+    }
+  },
+  {
+    _id: ObjectId("64e3018e844f658c688ee6e6"),
+    email: 'mohit@gmail.com',
+    age: 30,
+    address: {
+      colony: 'Govindpuram',
+      district: 'Ghaziabad',
+      pin: 201003,
+      state: 'UP'
+    }
+  },
+  {
+    _id: ObjectId("64e3018e844f658c688ee6e7"),
+    name: 'Ram',
+    email: 'Ram@gmail.com',
+    age: 30,
+    address: {
+      colony: 'NandGram',
+      district: 'Ghaziabad',
+      pin: 201003,
+      state: 'UP'
+    }
+  },
+  {
+    _id: ObjectId("64e3018e844f658c688ee6e8"),
+    name: 'Krish',
+    email: 'krish@gmail.com',
+    age: 22,
+    address: {
+      colony: 'Indrapuram',
+      district: 'Ghaziabad',
+      pin: 201003,
+      state: 'UP'
+    }
+  }
+]
+vips_app> db.customers.findOne();
+{
+  _id: ObjectId("64e2ff99844f658c688ee6e4"),
+  name: 'Anjali',
+  rollno: 11,
+  email: 'anjali@gmail.com'
+}
+vips_app> db.customers.find().size();
+5
+vips_app> db.customers.find().limit(2);
+[
+  {
+    _id: ObjectId("64e2ff99844f658c688ee6e4"),
+    name: 'Anjali',
+    rollno: 11,
+    email: 'anjali@gmail.com'
+  },
+  {
+    _id: ObjectId("64e3018e844f658c688ee6e5"),
+    name: 'shyam',
+    email: 'shyam@gmail.com',
+    age: 34,
+    address: {
+      colony: 'Govindpuram',
+      district: 'Ghaziabad',
+      pin: 201003,
+      state: 'UP'
+    }
+  }
+]
+vips_app> db.customers.find({},{name:1,email:1});
+[
+  {
+    _id: ObjectId("64e2ff99844f658c688ee6e4"),
+    name: 'Anjali',
+    email: 'anjali@gmail.com'
+  },
+  {
+    _id: ObjectId("64e3018e844f658c688ee6e5"),
+    name: 'shyam',
+    email: 'shyam@gmail.com'
+  },
+  {
+    _id: ObjectId("64e3018e844f658c688ee6e6"),
+    email: 'mohit@gmail.com'
+  },
+  {
+    _id: ObjectId("64e3018e844f658c688ee6e7"),
+    name: 'Ram',
+    email: 'Ram@gmail.com'
+  },
+  {
+    _id: ObjectId("64e3018e844f658c688ee6e8"),
+    name: 'Krish',
+    email: 'krish@gmail.com'
+  }
+]
+vips_app> db.customers.find({},{name:1,email:1,_id:0});
+
+[
+  { name: 'Anjali', email: 'anjali@gmail.com' },
+  { name: 'shyam', email: 'shyam@gmail.com' },
+  { email: 'mohit@gmail.com' },
+  { name: 'Ram', email: 'Ram@gmail.com' },
+  { name: 'Krish', email: 'krish@gmail.com' }
+]
+vips_app> db.customers.find({name:'Ram'},{name:1,email:1,_id:0});
+[ { name: 'Ram', email: 'Ram@gmail.com' } ]
+vips_app> db.customers.updateOne({name:'Anjali'},{$set:{age:18}});
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+vips_app> db.customers.updateOne({name:'Abhishek'},{$set:{age:18}},{upsert:true});
+{
+  acknowledged: true,
+  insertedId: ObjectId("64e305738c93583f0620eeb4"),
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 1
+}
+vips_app> db.customers.find();
+[
+  {
+    _id: ObjectId("64e2ff99844f658c688ee6e4"),
+    name: 'Anjali',
+    rollno: 11,
+    email: 'anjali@gmail.com',
+    age: 18
+  },
+  {
+    _id: ObjectId("64e3018e844f658c688ee6e5"),
+    name: 'shyam',
+    email: 'shyam@gmail.com',
+    age: 34,
+    address: {
+      colony: 'Govindpuram',
+      district: 'Ghaziabad',
+      pin: 201003,
+      state: 'UP'
+    }
+  },
+  {
+    _id: ObjectId("64e3018e844f658c688ee6e6"),
+    email: 'mohit@gmail.com',
+    age: 30,
+    address: {
+      colony: 'Govindpuram',
+      district: 'Ghaziabad',
+      pin: 201003,
+      state: 'UP'
+    }
+  },
+  {
+    _id: ObjectId("64e3018e844f658c688ee6e7"),
+    name: 'Ram',
+    email: 'Ram@gmail.com',
+    age: 30,
+    address: {
+      colony: 'NandGram',
+      district: 'Ghaziabad',
+      pin: 201003,
+      state: 'UP'
+    }
+  },
+  {
+    _id: ObjectId("64e3018e844f658c688ee6e8"),
+    name: 'Krish',
+    email: 'krish@gmail.com',
+    age: 22,
+    address: {
+      colony: 'Indrapuram',
+      district: 'Ghaziabad',
+      pin: 201003,
+      state: 'UP'
+    }
+  },
+  {
+    _id: ObjectId("64e305738c93583f0620eeb4"),
+    name: 'Abhishek',
+    age: 18
+  }
+]
+vips_app> db.customers.deleteOne({name:'Abhishek'});
+{ acknowledged: true, deletedCount: 1 }
+vips_app>
