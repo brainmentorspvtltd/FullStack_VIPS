@@ -1,0 +1,140 @@
+Database Management System(DBMS)
+Types Of Data:-
+Structured 
+Unstructured
+Semi-Structured
+
+
+TYpes of Data base:-
+DBMS
+-realational:- ROWS AND COLUMNS
+-object oriented:- OBJECT 
+-Hierarchial
+-cloud
+-network
+-NOoSQL 
+
+
+SQL:-RDBMS=Data is stored in table format
+NOSQL:-Not only SQL
+
+NoSQL:-
+(Not only SOL)
+4 categories
+-Key value based(Dynamo DB)
+-column oriented(cassandra)
+-Document based(Mongo DB)
+-Graph Based:-social media
+
+
+Document based database
+
+collection
+document->{key-value}
+Collections in mongo DB 
+JSON data size 16MB
+simple 
+capped-limit sized collection:-It stores updated + limited data 
+
+
+Why NoSQL?
+
+NoSQL databases are used in nearly every industry.Use cases range from the highly critical (e.g., storing financial data and healthcare records) to the more fun and frivolous (e.g., storing IoT readings from a smart kitty litter box).
+
+When should NoSQL be used?
+When deciding which database to use, decision-makers typically find one or more of the following factors lead them to selecting a NoSQL database:
+
+
+Fast-paced Agile development
+Storage of structured and semi-structured data
+Huge volumes of data
+Requirements for scale-out architecture
+Modern application paradigms like microservices and real-time streaming
+
+
+
+NoSQL databases typically have flexible schemas. Note that some NoSQL databases like MongoDB also have support for schema validation, so developers can lock down their schemas as much or as little as they'd like when they are ready.
+
+
+Mongo DB
+-It is document based NoSQL database
+-High volume data storage
+-use collections and documents
+
+
+
+
+Advantages:-
+
+Full cloud-based developer data platform
+Flexible document schemas
+Widely supported and code-native data access
+Change-friendly design
+Powerful querying and analytics
+Easy horizontal scale-out with sharding
+High performance (speed)
+Simple installation
+Cost-effective
+
+
+
+
+
+
+Drawbacks:-
+
+a. Joins not Supported
+MongoDB doesn’t support joins like a relational database. Yet one can use joins functionality by adding by coding it manually. But it may slow execution and affect performance.
+
+b. High Memory Usage
+MongoDB stores key names for each value pairs. Also, due to no functionality of joins, there is data redundancy. This results in increasing unnecessary usage of memory.
+
+c. Limited Data Size
+JSON 16MB
+
+d. Limited Nesting
+
+
+
+
+Nested Documents:-
+{
+'name':'Anjali',
+id:2001,
+address:{
+	first-line:'Gurugram',
+	second:line:'Northcap university',
+	}
+}
+
+
+
+
+
+
+Basic data types in mongoDB:-
+1.string-key can have quotes or not.
+2.int;- stores integer values
+3.double:- stores floating values
+4.boolean:-true, false
+5.null;-
+6.Array
+7.object
+8.objectId
+9.undefined
+10. binary data
+11.date:-var date=new Date()
+12.min and max key
+13. symbol
+14. javascript
+15. timestamp
+
+key must not be duplicate
+Operation
+CRUD
+Create-read-update-delete
+
+
+
+
+
